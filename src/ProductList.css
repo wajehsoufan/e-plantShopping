@@ -188,6 +188,30 @@ body {
 
     
 }
+
+.plants-container {
+  display: flex;           /* Arrange children in a row */
+  flex-wrap: wrap;         /* Wrap to next line if row is full */
+  gap: 20px;               /* Space between plant cards */
+}
+
+.plant-card {
+  flex: 0 1 calc(33.33% - 20px);  /* 3 cards per row, minus gap */
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.plant-card img {
+  width: 150px;   /* Reduce image width */
+  height: 150px;  /* Reduce image height */
+  object-fit: cover; /* Keep aspect ratio */
+  margin-bottom: 10px;
+}
+
 /* Add Media Query for responsiveness */
 @media (max-width: 768px) {
     .product-card {
